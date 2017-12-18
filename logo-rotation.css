@@ -1,0 +1,72 @@
+#loading {
+    -webkit-animation: rotateIn 1.5s infinite linear;
+    /*-webkit-animation: rotation 2s infinite linear;*/
+}
+
+#loading2 {
+    -webkit-animation: rotation 1.5s infinite linear;
+    /*-webkit-animation: rotation 2s infinite linear;*/
+}
+/*rotation from to. for IE10/11 should be careful to use @keyframes */
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+        /*center of rotation is point(115px,207px)*/
+        -webkit-transform-origin: 115px 207px;
+        opacity: 1;
+        /**/
+    }
+    to {
+        /* giving negative value to change the direction of rotation such as -359 */
+        -webkit-transform: rotate(359deg);
+        -webkit-transform-origin: 115px 207px;
+        opacity: 1;
+    }
+}
+
+/*spin for rotation*/
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+          transform: rotate(-360deg);
+      }
+}
+
+/*rotation based on percentage*/
+@-webkit-keyframes rotateIn {
+    0% {
+        -webkit-transform-origin: 115px 210px;
+        -webkit-transform: rotate(0deg);
+        opacity: 0.5;
+        width:200px;
+    }
+    50% {
+        -webkit-transform-origin: 115px 210px;
+        -webkit-transform: rotate(180deg);
+        opacity: 1;
+        width:400px;
+    }
+    100% {
+        -webkit-transform-origin: 115px 210px;
+        -webkit-transform: rotate(360deg);
+        opacity: 0.5;
+        width:200px;
+    }
+
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 4em;
+}
+div{
+    color: white;
+    position:relative;
+    float: left;
+    left: 50px;
+    with: 400px;
+    height: 480px;
+    margin:0;
+    padding:0;
+}
